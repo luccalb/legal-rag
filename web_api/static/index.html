@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGB RAG Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="hero">
+            <div class="hero-left">
+                <div class="brand">
+                    <div class="logo">BGB</div>
+                    <div class="brand-text">
+                        <span class="brand-title">BGB RAG Assistant</span>
+                        <span class="brand-subtitle">Gesetzestexte, klar zitiert</span>
+                    </div>
+                    <span class="status-pill">Live</span>
+                </div>
+                <div class="hero-copy">
+                    <h1>Präzise Antworten zum BGB mit Quellenbezug.</h1>
+                    <p>Stellen Sie Ihre Frage, erhalten Sie eine knappe Antwort und sehen Sie die relevanten Paragraphen auf einen Blick.</p>
+                    <div class="hero-meta">
+                        <span class="pill">RAG</span>
+                        <span class="pill">BGB</span>
+                        <span class="pill">Quellen</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="stat-card">
+                    <div class="stat-label">Antwortstil</div>
+                    <div class="stat-value">Juristisch & knapp</div>
+                    <div class="stat-note">Zitate aus dem Gesetzestext</div>
+                </div>
+            </div>
+        </header>
+
+        <main class="chat-card">
+            <div id="chat-container" class="chat-container">
+                <div id="chat-messages" class="chat-messages">
+                    <!-- Welcome message -->
+                    <div class="message assistant">
+                        <div class="message-content">
+                            <p>Willkommen! Ich bin Ihr BGB-Assistent. Stellen Sie mir Fragen zum deutschen Bürgerlichen Gesetzbuch.</p>
+                            <p class="example">Beispiel: "Wer erbt, wenn es kein Testament gibt?"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <form id="query-form">
+                    <input
+                        type="text"
+                        id="query-input"
+                        placeholder="Ihre Frage zum BGB..."
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" id="send-button">
+                        <span id="send-text">Senden</span>
+                        <span id="loading-text" style="display: none;">...</span>
+                    </button>
+                </form>
+                <div class="input-hint">Tipp: Nennen Sie das Thema oder den Paragraphen, z.B. "Pflichtteil".</div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/chat.js"></script>
+</body>
+</html>

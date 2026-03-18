@@ -1,0 +1,12 @@
+langchain==0.2.16
+langchain-community==0.2.16
+langchain-core==0.2.38
+langchain-google-genai==1.0.6
+beautifulsoup4==4.12.3
+chromadb==0.4.22
+ollama==0.1.6
+fastapi==0.109.0
+uvicorn==0.27.0
+python-dotenv==1.0.0
+requests==2.31.0
+lxml==5.1.0
